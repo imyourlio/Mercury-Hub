@@ -1,1 +1,8 @@
+local Player = game:GetService("Players").LocalPlayer
+local PlaceId = game.PlaceId
 
+if PlaceId == 16732694052 then
+  return
+else
+   Player:Kick("You are not in the correct game!")
+end
