@@ -1,0 +1,38 @@
+-- Open Source
+        local Players = game:GetService("Players")
+
+        local function processText(text, config)
+            if not text then return '' end
+            text = string.gsub(text, Players.LocalPlayer.Name, config.FakeName or Players.LocalPlayer.Name)
+            return text
+        end
+        
+        local function applyTextProcessing(config)
+            for _, element in pairs(game:GetDescendants()) do
+                if element:IsA("TextBox") or element:IsA("TextLabel") or element:IsA("TextButton") then
+                    element.Text = processText(element.Text, config)
+                    element.Name = processText(element.Name, config)
+                    element.Changed:Connect(function()
+                        element.Text = processText(element.Text, config)
+                        element.Name = processText(element.Name, config)
+                    end)
+                end
+            end
+        
+            game.DescendantAdded:Connect(function(descendant)
+                if descendant:IsA("TextBox") or descendant:IsA("TextLabel") or descendant:IsA("TextButton") then
+                    descendant.Text = processText(descendant.Text, config)
+                    descendant.Name = processText(descendant.Name, config)
+                    descendant.Changed:Connect(function()
+                        descendant.Text = processText(descendant.Text, config)
+                        descendant.Name = processText(descendant.Name, config)
+                    end)
+                end
+            end)
+        end
+        
+        local Config = {
+            FakeName = "Protected"
+        }
+        
+        applyTextProcessing(Config)
