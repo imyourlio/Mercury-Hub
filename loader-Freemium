@@ -1,7 +1,8 @@
 local Player = game:GetService("Players").LocalPlayer
 local PlaceId = game.PlaceId
 
-script_key = getgenv().getgenv().License
+script_key = getgenv().License
+
 if PlaceId == 16732694052 then
   return loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f3b76f6794913714d3e21ee7e2a47901.lua"))()
 else
