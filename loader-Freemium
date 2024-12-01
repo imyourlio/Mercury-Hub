@@ -1,10 +1,14 @@
 local Player = game:GetService("Players").LocalPlayer
 local PlaceId = game.PlaceId
 
-script_key = getgenv().License
-
-if PlaceId == 16732694052 then
-  return loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f3b76f6794913714d3e21ee7e2a47901.lua"))()
+if script_key then
+    if script_key ~= "KEY_HERE" then
+        if PlaceId == 16732694052 then
+            return loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f3b76f6794913714d3e21ee7e2a47901.lua"))()
+          else
+             Player:Kick("You are not in the correct game!")
+          end
+    end
 else
-   Player:Kick("You are not in the correct game!")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/imyourlio/Mercury-Hub/main/CheckKey"))()
 end
