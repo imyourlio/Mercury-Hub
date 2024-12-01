@@ -10,4 +10,3 @@ if script_key ~= "KEY_HERE" then
     else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/imyourlio/Mercury-Hub/main/CheckKey"))()
     end
-end
