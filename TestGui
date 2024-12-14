@@ -1,4 +1,4 @@
-
+-- HEE
 local ImportGlobals
 local ObjectTree = {
     {
@@ -4243,7 +4243,7 @@ local ClosureBindings = {
 
                 for Idx, Value in next, Values do
 
-                    task.wait(0.05)
+                    task.wait()
                     local Table = {}
 
                     Count = Count + 1
