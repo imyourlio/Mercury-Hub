@@ -1,0 +1,72 @@
+-- Open Source
+
+local lighting = game.Lighting
+
+lighting.Ambient = Color3.fromRGB(33, 33, 33)
+lighting.Brightness = 0.3
+lighting.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+lighting.ColorShift_Top = Color3.fromRGB(255, 247, 237)
+lighting.EnvironmentDiffuseScale = 0.105
+lighting.EnvironmentSpecularScale = 0.522
+lighting.GlobalShadows = true
+lighting.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
+lighting.ShadowSoftness = 0.04
+lighting.GeographicLatitude = -15.525
+lighting.ExposureCompensation = 0.75
+
+local bloomEffect = Instance.new("BloomEffect", lighting)
+bloomEffect.Name = "BloomEffect_Graphic"
+bloomEffect.Enabled = true
+bloomEffect.Intensity = 0.04
+bloomEffect.Size = 1900
+bloomEffect.Threshold = 0.915
+
+local colorCorrection1 = Instance.new("ColorCorrectionEffect", lighting)
+colorCorrection1.Name = "ColorCorrectionEffect1_Graphic"
+colorCorrection1.Brightness = 0.176
+colorCorrection1.Contrast = 0.39
+colorCorrection1.Enabled = true
+colorCorrection1.Saturation = 0.2
+colorCorrection1.TintColor = Color3.fromRGB(255, 220, 148)
+
+local colorCorrection2 = Instance.new("ColorCorrectionEffect", lighting)
+colorCorrection2.Name = "ColorCorrectionEffect2_Graphic"
+colorCorrection2.Brightness = 0
+colorCorrection2.Contrast = -0.07
+colorCorrection2.Saturation = 0
+colorCorrection2.Enabled = true
+colorCorrection2.TintColor = Color3.fromRGB(255, 247, 239)
+
+local colorCorrection3 = Instance.new("ColorCorrectionEffect", lighting)
+colorCorrection3.Name = "ColorCorrectionEffect3_Graphic"
+colorCorrection3.Brightness = 0.2
+colorCorrection3.Contrast = 0.45
+colorCorrection3.Saturation = -0.1
+colorCorrection3.Enabled = true
+colorCorrection3.TintColor = Color3.fromRGB(255, 255, 255)
+
+local depthOfField = Instance.new("DepthOfFieldEffect", lighting)
+depthOfField.Name = "DepthOfFieldEffect_Graphic"
+depthOfField.Enabled = true
+depthOfField.FarIntensity = 0.077
+depthOfField.FocusDistance = 21.54
+depthOfField.InFocusRadius = 20.77
+depthOfField.NearIntensity = 0.277
+
+local sunRaysEffect = Instance.new("SunRaysEffect", lighting)
+sunRaysEffect.Name = "SunRaysEffect_Graphic"
+sunRaysEffect.Enabled = false
+sunRaysEffect.Intensity = 0.01
+sunRaysEffect.Spread = 0.146
+
+lighting.Ambient = Color3.fromRGB(170, 170, 170)
+lighting.Brightness = 2
+lighting.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+lighting.ColorShift_Top = Color3.fromRGB(0, 0, 0)
+lighting.EnvironmentDiffuseScale = 0.105
+lighting.EnvironmentSpecularScale = 0.522
+lighting.GlobalShadows = false
+lighting.OutdoorAmbient = Color3.fromRGB(127, 127, 127)
+lighting.ShadowSoftness = 0
+lighting.GeographicLatitude = 66
+lighting.ExposureCompensation = 0.2
