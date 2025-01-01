@@ -1,7 +1,9 @@
+local FishData = {}
+
 local l_fish_0 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish");
 local l_presents_0 = require(game:GetService("ReplicatedStorage").modules.library.fish.presents);
 
-local v2 = {
+FishData.v2 = {
     ["Desolate Deep"] = {
         Trash = 22, 
         Common = 22, 
@@ -17,7 +19,8 @@ local v2 = {
         Rare = 15
     }
 };
-local v5 = {
+
+FishData.v5 = {
     ["Red Energy Crystal"] = {
         Requiriments = {
             GatesOpened = {
@@ -10230,4 +10233,4 @@ local v5 = {
     end
 };
 
-return v5
+return FishData
