@@ -3,7 +3,7 @@ local FishData = {}
 local l_fish_0 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish");
 local l_presents_0 = require(game:GetService("ReplicatedStorage").modules.library.fish.presents);
 
-FishData.v2 = {
+v2 = {
     ["Desolate Deep"] = {
         Trash = 22, 
         Common = 22, 
